@@ -1,10 +1,46 @@
  # Vaiables
 @baseUrl = http://localhost:3333
 
+###
+
 # Health check
+# @name healthCheck
 GET {{baseUrl}}/health
 
 ###
 
 # Get rooms
+# @name getRooms
 GET {{baseUrl}}/rooms
+
+###
+
+# Create Rooms
+# @name CreateRoom
+ POST {{baseUrl}}/rooms
+ Content-Type: application/json
+
+ {
+    "name": "sala de teste",
+    "description": "essa é uma sala de teste"
+ }
+###
+ @roomID = {{CreateRoom.response.body.$.roomId}}
+###
+
+ # Get Room Question
+ # @name getRoomQuestions
+ GET {{baseUrl}}/rooms/{{roomID}}/questions
+
+
+###
+
+# Create Rooms
+# @name CreateQuestion
+ POST {{baseUrl}}/rooms/{{roomID}}/questions
+ Content-Type: application/json
+
+ {
+    "question": "Question test?"
+ }
+
