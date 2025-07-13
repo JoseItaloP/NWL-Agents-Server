@@ -15,6 +15,20 @@
       "when": 1752148979078,
       "tag": "0001_medical_gorilla_man",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752412949351,
+      "tag": "0002_tricky_luckman",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1752415576298,
+      "tag": "0003_yellow_gwen_stacy",
+      "breakpoints": true
     }
   ]
 }
